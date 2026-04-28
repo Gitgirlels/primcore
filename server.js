@@ -19,7 +19,9 @@ const app = express();
 const YOUR_DOMAIN = (process.env.YOUR_DOMAIN || 'http://localhost:3000').replace(/\/$/, '');
 // Serve your shop HTML as the frontend
 app.use(express.static(path.join(__dirname, '')));
-
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 // Parse JSON — but NOT for the webhook route (needs raw body)
 app.use((req, res, next) => {
   if (req.originalUrl === '/webhook') {

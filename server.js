@@ -16,9 +16,9 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-
+const YOUR_DOMAIN = (process.env.YOUR_DOMAIN || 'http://localhost:3000').replace(/\/$/, '');
 // Serve your shop HTML as the frontend
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '')));
 
 // Parse JSON — but NOT for the webhook route (needs raw body)
 app.use((req, res, next) => {
@@ -127,9 +127,9 @@ app.post('/create-checkout-session', async (req, res) => {
       line_items: lineItems,
       mode: 'payment',
       // After payment, redirect to /success?session_id=xxx
-      success_url: `${process.env.YOUR_DOMAIN.replace(/\/$/, '')}/success?session_id={CHECKOUT_SESSION_ID}`,
-cancel_url: `${process.env.YOUR_DOMAIN.replace(/\/$/, '')}/`,
-      metadata: {
+      success_url: `${YOUR_DOMAIN}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${YOUR_DOMAIN}/`,
+            metadata: {
         product_ids: productIds,
       },
       // Collect customer email for receipt
@@ -283,7 +283,9 @@ app.post('/webhook', express.raw({ type: 'application/json' }), (req, res) => {
 // START SERVER
 // ============================================================
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`\n🛍  Paperpals Studio server running on http://localhost:${PORT}`);
+
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`\n🛍  Paperpals Studio server running on port ${PORT}`);
+  console.log(`🌐 Public domain: ${YOUR_DOMAIN}`);
   console.log(`📁  Place PDF files in: ${path.join(__dirname, 'pdfs/')}\n`);
 });

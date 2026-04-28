@@ -47,10 +47,10 @@ const PRODUCTS = {
     price: 1100, // $11.00
     pdf: 'gathering_apron_pattern.pdf',
   },
-  'tote-pattern': {
-    name: 'Gathered Tote Bag Pattern',
+  'outfit-colouring': {
+    name: 'Outfit colouring book',
     price: 800,
-    pdf: 'tote_bag_pattern.pdf',
+    pdf: 'outfitcolouring.pdf',
   },
   'skirt-pattern': {
     name: 'A-Line Skirt PDF Pattern',
@@ -127,8 +127,8 @@ app.post('/create-checkout-session', async (req, res) => {
       line_items: lineItems,
       mode: 'payment',
       // After payment, redirect to /success?session_id=xxx
-      success_url: `${process.env.YOUR_DOMAIN}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.YOUR_DOMAIN}/`,
+      success_url: `${process.env.YOUR_DOMAIN.replace(/\/$/, '')}/success?session_id={CHECKOUT_SESSION_ID}`,
+cancel_url: `${process.env.YOUR_DOMAIN.replace(/\/$/, '')}/`,
       metadata: {
         product_ids: productIds,
       },

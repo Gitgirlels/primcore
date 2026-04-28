@@ -140,7 +140,7 @@ app.post('/create-checkout-session', async (req, res) => {
 
     res.json({ url: session.url });
   } catch (err) {
-    console.error('Checkout error:', err.message);
+    console.error('Checkout error:', err.type, err.message, err.raw);
     res.status(500).json({ error: err.message });
   }
 });

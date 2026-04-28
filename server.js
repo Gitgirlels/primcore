@@ -18,7 +18,7 @@ const fs = require('fs');
 const app = express();
 const YOUR_DOMAIN = (process.env.YOUR_DOMAIN || 'http://localhost:3000').replace(/\/$/, '');
 // Serve your shop HTML as the frontend
-app.use(express.static(path.join(__dirname, '')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });

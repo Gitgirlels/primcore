@@ -287,7 +287,7 @@ app.post('/webhook', express.raw({ type: 'application/json' }), (req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, '0.0.0.0', () => {
-  console.log(`\n🛍  Paperpals Studio server running on port ${PORT}`);
+  console.log(`\n🛍 Primcore server running on port ${PORT}`);
   console.log(`🌐 Public domain: ${YOUR_DOMAIN}`);
   console.log(`📁  Place PDF files in: ${path.join(__dirname, 'pdfs/')}\n`);
 });

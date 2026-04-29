@@ -14,32 +14,43 @@
   body{background:#f9f6f0;font-family:'SuperMaples','Fredoka One',cursive;min-height:100vh;}
   .page{max-width:860px;margin:0 auto;padding:2rem 1.5rem 4rem;}
   .s{font-family:'SuperMaples','Fredoka One',cursive;}
+
+  /* ── Header ── */
   .hdr{background:#FF6B6B;border:4px solid #1a1a1a;border-radius:24px;margin-bottom:1.5rem;overflow:hidden;}
   .hdr-top{padding:1.25rem 1.5rem 1rem;display:flex;align-items:center;justify-content:space-between;border-bottom:4px solid #1a1a1a;}
   .brand{font-size:34px;color:white;letter-spacing:2px;line-height:1;text-shadow:3px 3px 0 #1a1a1a;}
   .brand-sub{font-size:12px;color:#FFE8E8;margin-top:4px;letter-spacing:1px;}
   .cart-pill{display:flex;align-items:center;gap:8px;background:#1a1a1a;color:#FFEAA7;border:none;border-radius:50px;padding:10px 20px;cursor:pointer;font-family:'SuperMaples','Fredoka One',cursive;font-size:16px;letter-spacing:1px;transition:transform 0.12s;}
   .cart-pill:hover{transform:scale(1.06);}
-  .bubble{background:#FFEAA7;color:#1a1a1a;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-family:'SuperMaples','Fredoka One',cursive;}
-  .nav{display:flex;align-items:stretch;background:#FFE66D;}
-  .nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:10px 6px;cursor:pointer;border-right:3px solid #1a1a1a;font-size:12px;color:#1a1a1a;transition:background 0.12s;letter-spacing:0.5px;font-family:'SuperMaples','Fredoka One',cursive;}
+  .bubble{background:#FFEAA7;color:#1a1a1a;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;}
+
+  /* ── Nav ── */
+  .nav{display:flex;align-items:stretch;background:#FFE66D;overflow-x:auto;}
+  .nav-item{flex:1;min-width:72px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:10px 6px;cursor:pointer;border-right:3px solid #1a1a1a;font-size:11px;color:#1a1a1a;transition:background 0.12s;letter-spacing:0.5px;font-family:'SuperMaples','Fredoka One',cursive;white-space:nowrap;}
   .nav-item:last-child{border-right:none;}
   .nav-item:hover{background:#FFD93D;}
   .nav-item.on{background:#1a1a1a;color:#FFE66D;}
+
+  /* ── Product grid ── */
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:14px;margin-bottom:1.5rem;}
   .card{border:3.5px solid #1a1a1a;border-radius:20px;overflow:hidden;background:white;cursor:pointer;transition:transform 0.12s;}
   .card:hover{transform:translateY(-4px) rotate(-0.5deg);}
-  .thumb{width:100%;aspect-ratio:1/1.05;display:flex;align-items:center;justify-content:center;border-bottom:3.5px solid #1a1a1a;position:relative;overflow:hidden;}
-  .nb{position:absolute;top:9px;left:9px;font-size:10px;background:#FF6B6B;color:white;border:2.5px solid #1a1a1a;border-radius:50px;padding:2px 10px;letter-spacing:1px;z-index:2;font-family:'SuperMaples','Fredoka One',cursive;}
+  .thumb{width:100%;aspect-ratio:1/1.05;border-bottom:3.5px solid #1a1a1a;position:relative;overflow:hidden;}
+  .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+  .nb{position:absolute;top:9px;left:9px;font-size:10px;background:#FF6B6B;color:white;border:2.5px solid #1a1a1a;border-radius:50px;padding:2px 10px;letter-spacing:1px;z-index:2;}
   .ci{padding:12px 14px 14px;}
   .ccat{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:#888;margin-bottom:3px;font-family:sans-serif;}
   .cname{font-size:15px;color:#1a1a1a;line-height:1.25;margin-bottom:10px;letter-spacing:0.5px;}
   .cfoot{display:flex;align-items:center;justify-content:space-between;}
   .price{font-size:20px;color:#1a1a1a;}
-  .abtn{width:34px;height:34px;border-radius:50%;border:2.5px solid #1a1a1a;background:white;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;color:#1a1a1a;font-family:'SuperMaples','Fredoka One',cursive;transition:all 0.12s;}
+  .abtn{width:34px;height:34px;border-radius:50%;border:2.5px solid #1a1a1a;background:white;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;color:#1a1a1a;transition:all 0.12s;}
   .abtn:hover{background:#1a1a1a;color:white;}
   .abtn.done{background:#1D9E75;border-color:#1D9E75;color:white;}
+
+  /* ── Divider ── */
   .divider{height:4px;background:#1a1a1a;border-radius:2px;margin:2rem 0;}
+
+  /* ── Cart panel ── */
   .cp{border:4px solid #1a1a1a;border-radius:24px;overflow:hidden;}
   .cp-hdr{background:#A29BFE;padding:1rem 1.5rem;border-bottom:4px solid #1a1a1a;}
   .cp-hdr h3{font-size:24px;color:#1a1a1a;letter-spacing:1px;}
@@ -55,19 +66,193 @@
   .ckbtn{width:100%;margin-top:1rem;padding:14px;background:#FF6B6B;color:white;border:3.5px solid #1a1a1a;border-radius:50px;font-size:17px;font-family:'SuperMaples','Fredoka One',cursive;cursor:pointer;letter-spacing:1px;transition:transform 0.1s;text-shadow:1px 1px 0 rgba(0,0,0,0.2);}
   .ckbtn:hover{transform:scale(1.02);}
   .pnote{display:flex;align-items:center;gap:6px;margin-top:10px;font-size:11px;font-family:sans-serif;color:#aaa;justify-content:center;}
-  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:100;align-items:center;justify-content:center;padding:1rem;}
-  .modal-overlay.open{display:flex;}
-  .modal{background:white;border:4px solid #1a1a1a;border-radius:24px;max-width:460px;width:100%;padding:2rem;position:relative;}
-  .modal-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;cursor:pointer;color:#1a1a1a;}
-  .modal-kanji{font-size:80px;text-align:center;margin:0.5rem 0 1rem;color:#3C3489;}
-  .modal-title{font-size:20px;margin-bottom:0.5rem;}
-  .modal-meta{font-size:13px;color:#555;font-family:sans-serif;line-height:1.6;}
-  .modal-add{width:100%;margin-top:1.5rem;padding:12px;background:#FF6B6B;color:white;border:3px solid #1a1a1a;border-radius:50px;font-size:16px;font-family:'SuperMaples','Fredoka One',cursive;cursor:pointer;letter-spacing:1px;}
-  .modal-add:hover{transform:scale(1.02);}
+
+  /* ══════════════════════════════════════════════
+     PRODUCT DRAWER  (slides up from bottom)
+  ══════════════════════════════════════════════ */
+  .drawer-overlay{
+    display:none;position:fixed;inset:0;
+    background:rgba(10,10,10,0.55);
+    z-index:200;
+    align-items:flex-end;
+    justify-content:center;
+    padding:0;
+  }
+  .drawer-overlay.open{display:flex;}
+
+  .drawer{
+    background:#f9f6f0;
+    border:4px solid #1a1a1a;
+    border-bottom:none;
+    border-radius:28px 28px 0 0;
+    width:100%;
+    max-width:640px;
+    max-height:92vh;
+    overflow-y:auto;
+    position:relative;
+    transform:translateY(100%);
+    transition:transform 0.32s cubic-bezier(0.22,1,0.36,1);
+    padding-bottom:2rem;
+  }
+  .drawer-overlay.open .drawer{transform:translateY(0);}
+
+  /* drag handle */
+  .drawer-handle{
+    width:44px;height:5px;
+    background:#ccc;border-radius:3px;
+    margin:14px auto 0;
+  }
+
+  /* close btn */
+  .drawer-close{
+    position:absolute;top:16px;right:18px;
+    background:#1a1a1a;color:white;border:none;
+    width:32px;height:32px;border-radius:50%;
+    font-size:16px;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    z-index:10;
+  }
+
+  /* ── A4 image carousel ── */
+  .carousel{
+    position:relative;
+    width:100%;
+    /* A4 ratio 1:√2 ≈ 1:1.414 */
+    aspect-ratio: 1 / 1.414;
+    background:#e8e4dc;
+    overflow:hidden;
+    border-bottom:3.5px solid #1a1a1a;
+    cursor:grab;
+    user-select:none;
+  }
+  .carousel:active{cursor:grabbing;}
+  .carousel-track{
+    display:flex;
+    height:100%;
+    transition:transform 0.3s cubic-bezier(0.25,1,0.5,1);
+    will-change:transform;
+  }
+  .carousel-slide{
+    flex:0 0 100%;
+    height:100%;
+    position:relative;
+  }
+  .carousel-slide img{
+    position:absolute;inset:0;
+    width:100%;height:100%;
+    object-fit:contain; /* show full A4 page, no crop */
+    display:block;
+    background:#f0ece4;
+  }
+
+  /* arrow buttons */
+  .car-btn{
+    position:absolute;top:50%;transform:translateY(-50%);
+    background:white;border:2.5px solid #1a1a1a;
+    width:36px;height:36px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;z-index:5;font-size:14px;
+    transition:background 0.1s;box-shadow:2px 2px 0 #1a1a1a;
+  }
+  .car-btn:hover{background:#FFE66D;}
+  .car-prev{left:10px;}
+  .car-next{right:10px;}
+  .car-btn.hidden{display:none;}
+
+  /* dot indicators */
+  .car-dots{
+    position:absolute;bottom:10px;left:50%;transform:translateX(-50%);
+    display:flex;gap:6px;
+  }
+  .car-dot{
+    width:7px;height:7px;border-radius:50%;
+    background:rgba(26,26,26,0.25);border:1.5px solid #1a1a1a;
+    cursor:pointer;transition:background 0.15s;
+  }
+  .car-dot.on{background:#1a1a1a;}
+
+  /* page counter pill */
+  .car-counter{
+    position:absolute;top:10px;right:10px;
+    background:rgba(26,26,26,0.7);color:white;
+    font-size:11px;font-family:sans-serif;
+    padding:3px 9px;border-radius:20px;letter-spacing:0.5px;
+  }
+
+  /* ── Drawer body ── */
+  .drawer-body{padding:1.25rem 1.5rem 0.5rem;}
+
+  /* category + NEW badge row */
+  .drawer-meta-row{display:flex;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap;}
+  .d-cat{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#888;font-family:sans-serif;}
+  .d-new{font-size:10px;background:#FF6B6B;color:white;border:2px solid #1a1a1a;border-radius:30px;padding:2px 9px;letter-spacing:1px;}
+
+  /* title + price row */
+  .drawer-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:1rem;}
+  .drawer-title{font-size:22px;color:#1a1a1a;line-height:1.2;letter-spacing:0.5px;flex:1;}
+  .drawer-price{font-size:30px;color:#1a1a1a;white-space:nowrap;line-height:1;}
+
+  /* tag pills */
+  .drawer-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:1.25rem;}
+  .dtag{
+    display:inline-flex;align-items:center;gap:5px;
+    font-size:11px;font-family:sans-serif;
+    background:white;border:2px solid #1a1a1a;border-radius:30px;
+    padding:4px 11px;color:#1a1a1a;letter-spacing:0.3px;
+  }
+  .dtag svg{flex-shrink:0;}
+
+  /* description */
+  .drawer-desc{
+    font-size:13.5px;font-family:sans-serif;color:#333;
+    line-height:1.7;margin-bottom:1.25rem;
+  }
+
+  /* what's included checklist */
+  .drawer-includes{
+    background:white;border:2.5px solid #1a1a1a;border-radius:16px;
+    padding:14px 16px;margin-bottom:1.25rem;
+  }
+  .drawer-includes-title{
+    font-size:11px;letter-spacing:2px;text-transform:uppercase;
+    color:#888;font-family:sans-serif;margin-bottom:10px;
+  }
+  .inc-item{
+    display:flex;align-items:center;gap:9px;
+    font-size:13px;font-family:sans-serif;color:#333;
+    padding:5px 0;border-bottom:1.5px dashed #eee;line-height:1.3;
+  }
+  .inc-item:last-child{border-bottom:none;}
+  .inc-check{
+    flex-shrink:0;width:18px;height:18px;
+    background:#D4F1C4;border:2px solid #1a1a1a;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-size:10px;
+  }
+
+  /* CTA row */
+  .drawer-cta{padding:0 1.5rem;}
+  .d-add{
+    width:100%;padding:15px;
+    background:#FF6B6B;color:white;
+    border:3.5px solid #1a1a1a;border-radius:50px;
+    font-size:18px;font-family:'SuperMaples','Fredoka One',cursive;
+    cursor:pointer;letter-spacing:1px;
+    transition:transform 0.1s;
+    text-shadow:1px 1px 0 rgba(0,0,0,0.18);
+    margin-bottom:10px;
+  }
+  .d-add:hover{transform:scale(1.02);}
+  .d-add.done{background:#1D9E75;border-color:#1D9E75;}
+  .d-secure{display:flex;align-items:center;gap:5px;justify-content:center;font-size:11px;font-family:sans-serif;color:#aaa;}
+
   @media(max-width:480px){
     .brand{font-size:24px;}
     .grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));}
     .hdr-top{flex-direction:column;gap:12px;align-items:flex-start;}
+    .nav-item{font-size:9px;min-width:58px;}
+    .drawer{border-radius:20px 20px 0 0;}
+    .drawer-title{font-size:18px;}
+    .drawer-price{font-size:24px;}
   }
 </style>
 </head>
@@ -84,26 +269,30 @@
         Cart <span class="bubble" id="cc">0</span>
       </button>
     </div>
-    <div class="nav" id="nav">
+    <div class="nav">
       <div class="nav-item on" onclick="filt('all',this)">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
         All
       </div>
       <div class="nav-item" onclick="filt('patterns',this)">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3l2 6h6l-5 4 2 6-5-4-5 4 2-6-5-4h6z"/></svg>
         Patterns
       </div>
       <div class="nav-item" onclick="filt('worksheets',this)">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="12" y2="16"/></svg>
         Worksheets
       </div>
       <div class="nav-item" onclick="filt('planners',this)">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg>
         Planners
       </div>
-      <div class="nav-item" onclick="filt('wall-art',this)">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
-        Wall Art
+      <div class="nav-item" onclick="filt('travel-guides',this)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+        Travel
+      </div>
+      <div class="nav-item" onclick="filt('languages',this)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        Languages
       </div>
     </div>
   </div>
@@ -129,100 +318,360 @@
   </div>
 </div>
 
-<!-- Product modal -->
-<div class="modal-overlay" id="modal" onclick="closeModal(event)">
-  <div class="modal">
-    <button class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">✕</button>
-    <div id="modal-thumb"></div>
-    <div class="modal-title" id="modal-title"></div>
-    <div class="modal-meta" id="modal-meta"></div>
-    <button class="modal-add" id="modal-add">Add to cart</button>
+<!-- ═══════════════ PRODUCT DRAWER ═══════════════ -->
+<div class="drawer-overlay" id="drawer-overlay" onclick="maybeCloseDrawer(event)">
+  <div class="drawer" id="drawer">
+    <div class="drawer-handle"></div>
+    <button class="drawer-close" onclick="closeDrawer()">✕</button>
+
+    <!-- A4 carousel -->
+    <div class="carousel" id="car"
+         onmousedown="dragStart(event)" ontouchstart="dragStart(event)"
+         onmousemove="dragMove(event)" ontouchmove="dragMove(event)"
+         onmouseup="dragEnd(event)" ontouchend="dragEnd(event)"
+         onmouseleave="dragEnd(event)">
+      <div class="carousel-track" id="car-track"></div>
+      <button class="car-btn car-prev hidden" id="car-prev" onclick="carGo(-1)">&#8592;</button>
+      <button class="car-btn car-next hidden" id="car-next" onclick="carGo(1)">&#8594;</button>
+      <div class="car-dots" id="car-dots"></div>
+      <div class="car-counter" id="car-counter"></div>
+    </div>
+
+    <!-- text content -->
+    <div class="drawer-body">
+      <div class="drawer-meta-row" id="d-meta-row"></div>
+      <div class="drawer-title-row">
+        <div class="drawer-title" id="d-title"></div>
+        <div class="drawer-price" id="d-price"></div>
+      </div>
+      <div class="drawer-tags" id="d-tags"></div>
+      <div class="drawer-desc" id="d-desc"></div>
+      <div class="drawer-includes" id="d-includes"></div>
+    </div>
+
+    <div class="drawer-cta">
+      <button class="d-add" id="d-add-btn">Add to cart</button>
+      <div class="d-secure">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        Secure checkout · Instant PDF delivery after payment
+      </div>
+    </div>
   </div>
 </div>
 
 <script>
-function kanjiThumb(){
-  return `<svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="8" width="124" height="124" rx="6" fill="white" stroke="#3C3489" stroke-width="2.5"/>
-    <line x1="8" y1="70" x2="132" y2="70" stroke="#3C3489" stroke-width="1" stroke-dasharray="3,3"/>
-    <line x1="70" y1="8" x2="70" y2="132" stroke="#3C3489" stroke-width="1" stroke-dasharray="3,3"/>
-    <text x="70" y="88" text-anchor="middle" font-size="62" fill="#3C3489" font-family="serif">日</text>
-    <rect x="18" y="18" width="30" height="30" rx="3" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
-    <text x="33" y="39" text-anchor="middle" font-size="18" fill="#534AB7" font-family="serif">水</text>
-    <rect x="92" y="18" width="30" height="30" rx="3" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
-    <text x="107" y="39" text-anchor="middle" font-size="18" fill="#534AB7" font-family="serif">火</text>
-    <rect x="18" y="92" width="30" height="30" rx="3" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
-    <text x="33" y="113" text-anchor="middle" font-size="18" fill="#534AB7" font-family="serif">木</text>
-    <rect x="92" y="92" width="30" height="30" rx="3" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.5"/>
-    <text x="107" y="113" text-anchor="middle" font-size="18" fill="#534AB7" font-family="serif">山</text>
-  </svg>`;
+// ─────────────────────────────────────────────────────────────
+// PRODUCTS
+// images: array of filenames — first is the card thumbnail,
+//         rest are extra A4 page previews. All go in public/
+// tags:   { icon (emoji or svg string), label }
+// includes: bullet points shown in the "what's included" box
+// ─────────────────────────────────────────────────────────────
+const products = [
+  {
+    id: 9, stripeId: 'apron-pattern',
+    name: 'Gathering apron sewing pattern', cat: 'patterns', price: 11, isNew: false,
+    images: ['thumb_apron_pattern.png','page2_apron_pattern.png','page3_apron_pattern.png'],
+    tags: [
+      {icon:'📄', label:'3 pages'},
+      {icon:'🖨️', label:'Print at home'},
+      {icon:'📐', label:'A4 & US Letter'},
+      {icon:'⭐', label:'Beginner friendly'},
+    ],
+    desc: 'A pretty gathered apron with a harvest pouch pocket — perfect for gardening, crafting, or the kitchen. The pattern is clean and approachable with no fiddly zips or tricky closures.',
+    includes: ['Full-size pattern pieces (print & cut)','8-step illustrated sewing instructions','Materials & notions list','Finished size guide: 70×50 cm'],
+  },
+  {
+    id: 10, stripeId: 'kanji-n4',
+    name: 'Japanese kanji practice worksheets', cat: 'worksheets', price: 6, isNew: true,
+    images: ['thumb_kanji_n4.png','page2_kanji_n4.png','page3_kanji_n4.png'],
+    tags: [
+      {icon:'📄', label:'11 pages'},
+      {icon:'🎌', label:'JLPT N4'},
+      {icon:'✏️', label:'Trace & practice'},
+      {icon:'🖨️', label:'Print at home'},
+    ],
+    desc: 'Structured worksheets covering all 104 JLPT N4 kanji, grouped 10 per page. Each character card gives you everything you need to learn and remember it — reading, meaning, stroke order, and practice space.',
+    includes: ['104 kanji across 11 printable sheets','ON & kun readings for each character','Stroke order guide with numbered arrows','6 trace + freewrite practice squares per kanji','Printable in A4 or US Letter'],
+  },
+  {
+    id: 1, stripeId: 'outfit-colouring',
+    name: 'Outfit colouring book', cat: 'patterns', price: 8, isNew: false,
+    images: ['thumb_outfit_colouring.png','page2_outfit_colouring.png','page3_outfit_colouring.png'],
+    tags: [
+      {icon:'🎨', label:'Colouring book'},
+      {icon:'📄', label:'20 pages'},
+      {icon:'👗', label:'Fashion illustrations'},
+      {icon:'🖨️', label:'Print at home'},
+    ],
+    desc: 'A fashion-forward colouring book packed with outfit illustrations — from cosy knitwear to elegant evening looks. Perfect for all ages, relaxing solo or as a creative activity with kids.',
+    includes: ['20 unique outfit illustration pages','Mix of casual, formal & seasonal styles','Clean line art — no bleed-through on standard paper','A4 format, print as many copies as you like'],
+  },
+  {
+    id: 2, stripeId: 'skirt-pattern',
+    name: 'A-line skirt PDF pattern', cat: 'patterns', price: 9, isNew: false,
+    images: ['thumb_skirt_pattern.png','page2_skirt_pattern.png','page3_skirt_pattern.png'],
+    tags: [
+      {icon:'📐', label:'Multi-size'},
+      {icon:'⭐', label:'Beginner friendly'},
+      {icon:'🖨️', label:'Print at home'},
+      {icon:'📄', label:'4 pages'},
+    ],
+    desc: 'A timeless A-line skirt with a simple elastic waistband — the ideal first sewing project. Sizes range from XS to XL with clear grading lines so you can blend between sizes easily.',
+    includes: ['Pattern pieces in sizes XS–XL','Elastic waistband — no zips needed','Step-by-step illustrated instructions','Fabric requirements chart','Print at home on A4 or tape together for full size'],
+  },
+  {
+    id: 3, stripeId: 'habit-tracker',
+    name: 'Daily habit tracker', cat: 'worksheets', price: 4, isNew: false,
+    images: ['thumb_habit_tracker.png','page2_habit_tracker.png'],
+    tags: [
+      {icon:'📄', label:'1 page'},
+      {icon:'📅', label:'31-day grid'},
+      {icon:'🖨️', label:'Print monthly'},
+      {icon:'✏️', label:'Fill & track'},
+    ],
+    desc: 'A no-fuss habit tracker with a clean 31-day grid and room for 10 habits. Fill in one column per day and watch your streaks build. Print a fresh sheet at the start of every month.',
+    includes: ['31-day × 10-habit tracking grid','Blank habit name slots — fully customisable','Monthly notes section','Minimalist design, ink-friendly to print'],
+  },
+  {
+    id: 4, stripeId: 'meal-planner',
+    name: 'Weekly meal planner', cat: 'planners', price: 5, isNew: false,
+    images: ['thumb_meal_planner.png','page2_meal_planner.png'],
+    tags: [
+      {icon:'📄', label:'1 page'},
+      {icon:'🛒', label:'Shopping list'},
+      {icon:'🍽️', label:'7-day layout'},
+      {icon:'🖨️', label:'Print weekly'},
+    ],
+    desc: 'Plan your whole week of meals on one tidy sheet. Sections for breakfast, lunch, dinner, and snacks across all 7 days, with an integrated shopping list so nothing gets forgotten at the store.',
+    includes: ['7-day meal grid with B/L/D/snack slots','Integrated grocery shopping list','Weekly notes & meal prep reminders area','A4 format, prints cleanly in black & white'],
+  },
+  {
+    id: 5, stripeId: 'stitch-sampler',
+    name: 'Floral stitch sampler', cat: 'patterns', price: 12, isNew: false,
+    images: ['thumb_stitch_sampler.png','page2_stitch_sampler.png','page3_stitch_sampler.png'],
+    tags: [
+      {icon:'🌸', label:'12 motifs'},
+      {icon:'🪡', label:'Embroidery'},
+      {icon:'📄', label:'5 pages'},
+      {icon:'⭐', label:'Beginner friendly'},
+    ],
+    desc: 'A beautiful embroidery sampler featuring 12 floral motifs — from simple daisies to detailed roses. Each motif is designed to practise a different classic stitch, making it perfect for beginners building their skills.',
+    includes: ['12 printable floral motif transfers','Stitch guide for each motif (8 stitch types)','DMC thread colour suggestions','Hoop size & fabric recommendations','Step-by-step photo stitch reference sheet'],
+  },
+  {
+    id: 7, stripeId: 'budget-bundle',
+    name: 'Budget worksheet bundle', cat: 'worksheets', price: 7, isNew: false,
+    images: ['thumb_budget_bundle.png','page2_budget_bundle.png','page3_budget_bundle.png','page4_budget_bundle.png'],
+    tags: [
+      {icon:'📄', label:'5 pages'},
+      {icon:'💰', label:'Finance tools'},
+      {icon:'🖨️', label:'Print at home'},
+      {icon:'✏️', label:'Fill & track'},
+    ],
+    desc: 'Everything you need to get a clear picture of your finances — all in one printable bundle. Whether you\'re saving for something big or just trying to stop overspending, these sheets make it visual and manageable.',
+    includes: ['Monthly budget overview sheet','Weekly expense tracker','Savings goal worksheet with progress bar','Debt payoff planner (snowball method)','Net worth snapshot sheet'],
+  },
+  {
+    id: 8, stripeId: 'goals-planner',
+    name: 'Monthly goals planner', cat: 'planners', price: 5, isNew: false,
+    images: ['thumb_goals_planner.png','page2_goals_planner.png'],
+    tags: [
+      {icon:'📄', label:'1 page'},
+      {icon:'🎯', label:'Goal setting'},
+      {icon:'🖨️', label:'Print monthly'},
+      {icon:'✏️', label:'Reflect & plan'},
+    ],
+    desc: 'Set up to 5 goals for the month, break each one into action steps, and reflect on what worked at the end. Fits everything onto one page so it stays pinned somewhere you\'ll actually look at it.',
+    includes: ['5 goal slots with priority ranking','Action steps & deadline fields per goal','Mid-month check-in prompts','End-of-month reflection section','A4, prints cleanly in colour or B&W'],
+  },
+  // ── Travel Guides ──
+  {
+    id: 11, stripeId: 'japan-travel-guide',
+    name: 'Japan travel guide — Tokyo & Kyoto', cat: 'travel-guides', price: 9, isNew: true,
+    images: ['thumb_japan_travel.png','page2_japan_travel.png','page3_japan_travel.png','page4_japan_travel.png'],
+    tags: [
+      {icon:'📄', label:'48 pages'},
+      {icon:'🗾', label:'Tokyo & Kyoto'},
+      {icon:'🖨️', label:'Print & pack'},
+      {icon:'🗺️', label:'Itinerary included'},
+    ],
+    desc: 'A practical, printable travel guide built for first-time visitors to Japan. Skip the overwhelm — this guide cuts straight to the best areas, transport tricks, and essential things to know before you go.',
+    includes: ['Tokyo neighbourhood-by-neighbourhood guide','Kyoto temples, shrines & day trip picks','Getting around: trains, IC cards, airport transfers','Budget planning breakdown (budget to mid-range)','Blank itinerary template to fill in','Essential Japanese phrases insert page'],
+  },
+  {
+    id: 12, stripeId: 'italy-travel-guide',
+    name: 'Italy travel guide — Rome, Florence & Amalfi', cat: 'travel-guides', price: 9, isNew: false,
+    images: ['thumb_italy_travel.png','page2_italy_travel.png','page3_italy_travel.png'],
+    tags: [
+      {icon:'📄', label:'44 pages'},
+      {icon:'🇮🇹', label:'3 destinations'},
+      {icon:'🖨️', label:'Print & pack'},
+      {icon:'🗺️', label:'Day-by-day itinerary'},
+    ],
+    desc: 'Rome\'s ancient streets, Florence\'s art, and the Amalfi Coast\'s cliffs — this guide helps you do all three without the stress. Day-by-day itineraries you can follow loosely or stick to closely.',
+    includes: ['Day-by-day itinerary for each destination','Top restaurant & café picks per city','Packing checklist for a 10-day trip','Getting between cities: train & ferry options','Printable Italian phrase card (fold to wallet size)','Amalfi hiking trail overview'],
+  },
+  // ── Languages ──
+  {
+    id: 13, stripeId: 'spanish-phrase-book',
+    name: 'Essential Spanish phrasebook', cat: 'languages', price: 5, isNew: false,
+    images: ['thumb_spanish_phrases.png','page2_spanish_phrases.png','page3_spanish_phrases.png'],
+    tags: [
+      {icon:'📄', label:'8 pages'},
+      {icon:'🇪🇸', label:'Spanish'},
+      {icon:'🔤', label:'Pronunciation guide'},
+      {icon:'✂️', label:'Folds pocket-size'},
+    ],
+    desc: 'The 60 phrases you\'ll actually use — no filler. Covers the moments that matter most when travelling: ordering food, asking for directions, handling emergencies, and making small talk.',
+    includes: ['60 essential phrases across 8 categories','Pronunciation guide with syllable stress marks','Emergency & health phrases section','Numbers, dates & time reference','Fold-down design fits in a wallet or passport holder'],
+  },
+  {
+    id: 14, stripeId: 'french-vocab-sheets',
+    name: 'French vocabulary practice sheets', cat: 'languages', price: 6, isNew: true,
+    images: ['thumb_french_vocab.png','page2_french_vocab.png','page3_french_vocab.png'],
+    tags: [
+      {icon:'📄', label:'10 pages'},
+      {icon:'🇫🇷', label:'French'},
+      {icon:'✏️', label:'Fill-in practice'},
+      {icon:'📚', label:'200 words'},
+    ],
+    desc: 'Two hundred themed vocabulary words spread across 10 focused sheets. Each sheet covers one topic area so you can build vocabulary systematically — great for beginners and as a refresher before travel.',
+    includes: ['200 words across 10 themed sheets','Topics: home, food, travel, body, weather, time, colours, family, numbers, verbs','English → French reference column','Fill-in-the-blank self-test column','Printable in A4 or US Letter'],
+  },
+];
+
+// ─────────────────────────────────────────────────────────────
+// Carousel state
+// ─────────────────────────────────────────────────────────────
+let carIdx = 0, carTotal = 0;
+let dragX0 = null, dragX = null, isDragging = false;
+
+function carBuild(images) {
+  carIdx = 0; carTotal = images.length;
+  const track = document.getElementById('car-track');
+  track.innerHTML = images.map(src =>
+    `<div class="carousel-slide"><img src="${src}" alt=""/></div>`
+  ).join('');
+  track.style.transform = 'translateX(0)';
+
+  const dots = document.getElementById('car-dots');
+  dots.innerHTML = images.length > 1
+    ? images.map((_,i) => `<div class="car-dot${i===0?' on':''}" onclick="carGoTo(${i})"></div>`).join('')
+    : '';
+
+  document.getElementById('car-prev').classList.toggle('hidden', carTotal <= 1);
+  document.getElementById('car-next').classList.toggle('hidden', carTotal <= 1);
+  document.getElementById('car-counter').textContent = carTotal > 1 ? `1 / ${carTotal}` : '';
+  carUpdateUI();
 }
 
-const svgShapes=[
-  c=>`<svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="${c}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 20h20l-3 18H17L14 20z"/><path d="M19 20c0-3.5 2.2-7 5-7s5 3.5 5 7"/><circle cx="24" cy="30" r="2.5" fill="${c}"/></svg>`,
-  c=>`<svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="${c}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14h18l7 24H8L15 14z"/><line x1="15" y1="14" x2="33" y2="14"/></svg>`,
-  c=>`<svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="${c}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="10" y="8" width="28" height="32" rx="4"/><polyline points="17,21 20,24 27,17"/><polyline points="17,30 20,33 27,26"/></svg>`,
-  c=>`<svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="${c}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="12" width="32" height="28" rx="4"/><line x1="8" y1="20" x2="40" y2="20"/><line x1="17" y1="8" x2="17" y2="16"/><line x1="31" y1="8" x2="31" y2="16"/><circle cx="24" cy="30" r="3" fill="${c}"/></svg>`,
-  c=>`<svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="${c}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="5" fill="${c}" opacity="0.3"/><circle cx="24" cy="24" r="5"/><ellipse cx="24" cy="14" rx="4" ry="6"/><ellipse cx="24" cy="34" rx="4" ry="6"/><ellipse cx="14" cy="24" rx="6" ry="4"/><ellipse cx="34" cy="24" rx="6" ry="4"/></svg>`,
-  c=>`<svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="${c}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="32" height="32" rx="4"/><rect x="14" y="14" width="20" height="20" rx="2"/><path d="M14 28l6-6 5 5 3-3 6 6"/></svg>`,
-  c=>`<svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="${c}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="14"/><path d="M24 14v20M19 18h7a3 3 0 010 6h-4a3 3 0 010 6h7"/></svg>`,
-  c=>`<svg width="72" height="72" viewBox="0 0 48 48" fill="none" stroke="${c}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l4.5 9.5L39 17l-7.5 7.5 1.5 11-9-5-9 5 1.5-11L9 17l10.5-1.5z"/></svg>`,
-];
-
-const thumbColors=[
-  {bg:'#EEEDFE',dot:'#534AB7'},
-  {bg:'#FFF3B0',dot:'#412402'},
-  {bg:'#FFDDE1',dot:'#72243E'},
-  {bg:'#D4F1C4',dot:'#27500A'},
-  {bg:'#DDD6FE',dot:'#3C3489'},
-  {bg:'#C7F2E8',dot:'#085041'},
-  {bg:'#BFE9FF',dot:'#0C447C'},
-  {bg:'#FFE8C8',dot:'#633806'},
-  {bg:'#F9D0F5',dot:'#72243E'},
-];
-
-const products=[
-  {id:9,stripeId:'apron-pattern',name:'Gathering apron sewing pattern',cat:'patterns',price:11,ti:0,isNew:false,type:'apron',
-   desc:'Gardening apron with gathered waist and harvest pouch. Includes cut pieces, 8-step illustrated instructions, materials list. Beginner-friendly — no zips or tricky techniques. Finished size: 70×50cm.'},
-  {id:10,stripeId:'kanji-n4',name:'Japanese kanji practice worksheets',cat:'worksheets',price:6,ti:0,isNew:true,type:'kanji',
-   desc:'104 JLPT N4 kanji across 11 printable pages (10 per page). Each card includes: large kanji with stroke count, ON/kun readings, stroke order guide, and 6 practice squares with trace guide.'},
-  {id:1,stripeId:'outfit-colouring',name:'outfit colouring',cat:'patterns',price:8,ti:1,isNew:false,type:'svg',
-   desc:'Classic gathered tote with wide base and sturdy handles. Beginner friendly. Includes full measurements and seam allowance. Great for fabric scraps.'},
-  {id:2,stripeId:'skirt-pattern',name:'A-line skirt PDF pattern',cat:'patterns',price:9,ti:2,isNew:false,type:'svg',
-   desc:'Simple A-line skirt pattern with elastic waistband. Multiple sizes included. Perfect first garment project.'},
-  {id:3,stripeId:'habit-tracker',name:'Daily habit tracker',cat:'worksheets',price:4,ti:3,isNew:false,type:'svg',
-   desc:'31-day habit tracker with 10 habit slots. Clean minimal layout. Print monthly and track streaks.'},
-  {id:4,stripeId:'meal-planner',name:'Weekly meal planner',cat:'planners',price:5,ti:4,isNew:false,type:'svg',
-   desc:'7-day meal planner with breakfast, lunch, dinner, and snacks. Includes shopping list section.'},
-  {id:5,stripeId:'stitch-sampler',name:'Floral stitch sampler',cat:'patterns',price:12,ti:5,isNew:false,type:'svg',
-   desc:'Embroidery sampler featuring 12 classic floral motifs. Includes stitch guide and thread colour suggestions.'},
-  {id:6,stripeId:'fern-print',name:'Botanical print — fern',cat:'wall-art',price:6,ti:6,isNew:false,type:'svg',
-   desc:'Minimalist botanical fern illustration. Prints beautifully at A4 or A3. Perfect for gallery walls.'},
-  {id:7,stripeId:'budget-bundle',name:'Budget worksheet bundle',cat:'worksheets',price:7,ti:7,isNew:false,type:'svg',
-   desc:'5-page bundle: monthly budget overview, expense tracker, savings goal sheet, debt payoff planner, and net worth tracker.'},
-  {id:8,stripeId:'goals-planner',name:'Monthly goals planner',cat:'planners',price:5,ti:8,isNew:false,type:'svg',
-   desc:'One-page monthly goals planner with priority ranking, action steps, and reflection section.'},
-];
-
-let cart=[],curFilt='all';
-
-function getThumbHtml(p){
-  if(p.type==='apron') return {bg:'#F5F0E8',html:`<img src="ChatGPT_Image_Apr_28__2026__10_33_33_AM.png" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">`};
-  if(p.type==='kanji') return {bg:'#EEEDFE',html:kanjiThumb()};
-  const tc=thumbColors[p.ti];
-  return {bg:tc.bg,html:svgShapes[p.ti](tc.dot)};
+function carGoTo(i) {
+  carIdx = Math.max(0, Math.min(i, carTotal - 1));
+  carUpdateUI();
 }
 
-function renderGrid(f){
-  const g=document.getElementById('grid');
-  const list=f==='all'?products:products.filter(p=>p.cat===f);
-  g.innerHTML=list.map(p=>{
-    const inCart=!!cart.find(c=>c.id===p.id);
-    const {bg,html}=getThumbHtml(p);
-    return `<div class="card" onclick="openModal(${p.id})">
-      <div class="thumb" style="background:${bg}">${html}${p.isNew?'<span class="nb">NEW</span>':''}</div>
+function carGo(dir) { carGoTo(carIdx + dir); }
+
+function carUpdateUI() {
+  document.getElementById('car-track').style.transform = `translateX(-${carIdx * 100}%)`;
+  document.querySelectorAll('.car-dot').forEach((d,i) => d.classList.toggle('on', i === carIdx));
+  document.getElementById('car-prev').classList.toggle('hidden', carIdx === 0 || carTotal <= 1);
+  document.getElementById('car-next').classList.toggle('hidden', carIdx === carTotal - 1 || carTotal <= 1);
+  if (carTotal > 1) document.getElementById('car-counter').textContent = `${carIdx+1} / ${carTotal}`;
+}
+
+// drag / swipe
+function dragStart(e) {
+  isDragging = true;
+  dragX0 = e.touches ? e.touches[0].clientX : e.clientX;
+  dragX = dragX0;
+}
+function dragMove(e) {
+  if (!isDragging) return;
+  dragX = e.touches ? e.touches[0].clientX : e.clientX;
+}
+function dragEnd(e) {
+  if (!isDragging) return;
+  isDragging = false;
+  const diff = dragX0 - dragX;
+  if (Math.abs(diff) > 40) carGo(diff > 0 ? 1 : -1);
+}
+
+// ─────────────────────────────────────────────────────────────
+// Drawer open / close
+// ─────────────────────────────────────────────────────────────
+function openDrawer(id) {
+  const p = products.find(x => x.id === id);
+  // carousel
+  carBuild(p.images);
+
+  // meta row
+  document.getElementById('d-meta-row').innerHTML =
+    `<span class="d-cat">${p.cat.replace(/-/g,' ')}</span>` +
+    (p.isNew ? `<span class="d-new">NEW</span>` : '');
+
+  // title + price
+  document.getElementById('d-title').textContent = p.name;
+  document.getElementById('d-price').textContent = `$${p.price}`;
+
+  // tags
+  document.getElementById('d-tags').innerHTML = (p.tags || []).map(t =>
+    `<span class="dtag">${t.icon} ${t.label}</span>`
+  ).join('');
+
+  // description
+  document.getElementById('d-desc').textContent = p.desc;
+
+  // includes
+  document.getElementById('d-includes').innerHTML =
+    `<div class="drawer-includes-title">What's included</div>` +
+    (p.includes || []).map(item =>
+      `<div class="inc-item"><span class="inc-check">✓</span>${item}</div>`
+    ).join('');
+
+  // CTA button
+  const btn = document.getElementById('d-add-btn');
+  const inCart = !!cart.find(c => c.id === id);
+  btn.textContent = inCart ? 'Already in cart ✓' : 'Add to cart';
+  btn.className = 'd-add' + (inCart ? ' done' : '');
+  btn.onclick = () => {
+    addC(id);
+    const nowIn = !!cart.find(c => c.id === id);
+    btn.textContent = 'Added ✓';
+    btn.className = 'd-add done';
+  };
+
+  document.getElementById('drawer-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDrawer() {
+  document.getElementById('drawer-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function maybeCloseDrawer(e) {
+  if (e.target === document.getElementById('drawer-overlay')) closeDrawer();
+}
+
+// ─────────────────────────────────────────────────────────────
+// Grid
+// ─────────────────────────────────────────────────────────────
+let cart = [], curFilt = 'all';
+
+function renderGrid(f) {
+  const g = document.getElementById('grid');
+  const list = f === 'all' ? products : products.filter(p => p.cat === f);
+  g.innerHTML = list.map(p => {
+    const inCart = !!cart.find(c => c.id === p.id);
+    return `<div class="card" onclick="openDrawer(${p.id})">
+      <div class="thumb">
+        <img src="${p.images[0]}" alt="${p.name}"/>
+        ${p.isNew ? '<span class="nb">NEW</span>' : ''}
+      </div>
       <div class="ci">
-        <div class="ccat">${p.cat.replace('-',' ')}</div>
+        <div class="ccat">${p.cat.replace(/-/g,' ')}</div>
         <div class="cname">${p.name}</div>
         <div class="cfoot">
           <span class="price">$${p.price}</span>
@@ -233,65 +682,62 @@ function renderGrid(f){
   }).join('');
 }
 
-function openModal(id){
-  const p=products.find(x=>x.id===id);
-  const {bg,html}=getThumbHtml(p);
-  document.getElementById('modal-thumb').innerHTML=`<div style="background:${bg};border-radius:12px;padding:1.5rem;text-align:center;margin-bottom:1rem;">${html}</div>`;
-  document.getElementById('modal-title').textContent=p.name+' — $'+p.price;
-  document.getElementById('modal-meta').innerHTML=`<strong>Category:</strong> ${p.cat}<br><br>${p.desc}`;
-  const btn=document.getElementById('modal-add');
-  const inCart=!!cart.find(c=>c.id===id);
-  btn.textContent=inCart?'Already in cart ✓':'Add to cart';
-  btn.onclick=()=>{addC(id);document.getElementById('modal').classList.remove('open');};
-  document.getElementById('modal').classList.add('open');
-}
-
-function closeModal(e){
-  if(e.target===document.getElementById('modal')) document.getElementById('modal').classList.remove('open');
-}
-
-function filt(f,btn){
-  curFilt=f;
-  document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('on'));
+function filt(f, btn) {
+  curFilt = f;
+  document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('on'));
   btn.classList.add('on');
   renderGrid(f);
 }
 
-function addC(id){
-  if(!cart.find(c=>c.id===id)){
-    cart.push(products.find(p=>p.id===id));
+function addC(id) {
+  if (!cart.find(c => c.id === id)) {
+    cart.push(products.find(p => p.id === id));
     renderGrid(curFilt);
     renderCart();
-    document.getElementById('cc').textContent=cart.length;
+    document.getElementById('cc').textContent = cart.length;
   }
 }
 
-function renderCart(){
-  const ec=document.getElementById('ecart'),cl=document.getElementById('clist'),
-    tr=document.getElementById('ctrow'),cb=document.getElementById('ckbtn'),pn=document.getElementById('pnote');
-  if(!cart.length){ec.style.display='block';cl.innerHTML='';tr.style.display='none';cb.style.display='none';pn.style.display='none';return;}
-  ec.style.display='none';
-  cl.innerHTML=cart.map(p=>`<div class="citem"><div><div class="cin">${p.name}</div><div class="csub">PDF download · instant delivery</div></div><span class="cpr">$${p.price}</span></div>`).join('');
-  document.getElementById('ctamt').textContent='$'+cart.reduce((s,p)=>s+p.price,0);
-  tr.style.display='flex';cb.style.display='block';pn.style.display='flex';
+// ─────────────────────────────────────────────────────────────
+// Cart
+// ─────────────────────────────────────────────────────────────
+function renderCart() {
+  const ec = document.getElementById('ecart'), cl = document.getElementById('clist'),
+    tr = document.getElementById('ctrow'), cb = document.getElementById('ckbtn'),
+    pn = document.getElementById('pnote');
+  if (!cart.length) {
+    ec.style.display='block'; cl.innerHTML='';
+    tr.style.display='none'; cb.style.display='none'; pn.style.display='none';
+    return;
+  }
+  ec.style.display = 'none';
+  cl.innerHTML = cart.map(p =>
+    `<div class="citem">
+      <div><div class="cin">${p.name}</div><div class="csub">PDF download · instant delivery</div></div>
+      <span class="cpr">$${p.price}</span>
+    </div>`
+  ).join('');
+  document.getElementById('ctamt').textContent = '$' + cart.reduce((s,p) => s+p.price, 0);
+  tr.style.display='flex'; cb.style.display='block'; pn.style.display='flex';
 }
 
-function goCart(){document.querySelector('.cp').scrollIntoView({behavior:'smooth',block:'start'});}
+function goCart() {
+  document.querySelector('.cp').scrollIntoView({ behavior:'smooth', block:'start' });
+}
 
-function checkout(){
-  if(!cart.length) return;
-  const items = cart.map(p => ({ id: p.stripeId }));
+function checkout() {
+  if (!cart.length) return;
   fetch('/create-checkout-session', {
-    method: 'POST',
-    headers: {'Content-Type':'application/json'},
-    body: JSON.stringify({ items })
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ items: cart.map(p => ({ id: p.stripeId })) })
   })
-  .then(r => r.json())
-  .then(data => {
-    if(data.url) window.location.href = data.url;
-    else alert('Checkout error: ' + (data.error || 'unknown'));
-  })
-  .catch(err => alert('Network error. Is the server running?'));
+    .then(r => r.json())
+    .then(data => {
+      if (data.url) window.location.href = data.url;
+      else alert('Checkout error: ' + (data.error || 'unknown'));
+    })
+    .catch(() => alert('Network error. Is the server running?'));
 }
 
 renderGrid('all');

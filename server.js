@@ -40,55 +40,35 @@ app.use((req, res, next) => {
 // Put your actual PDF files in the /pdfs folder
 // ============================================================
 const PRODUCTS = {
-  'kanji-n4': {
-    name: 'Japanese Kanji Practice Worksheets (N4)',
-    price: 600, // $6.00 in cents
-    pdf: 'n4_kanji_worksheets.pdf',
-  },
-  'apron-pattern': {
-    name: 'Gathering Apron Sewing Pattern',
-    price: 1100, // $11.00
-    pdf: 'gathering_apron_pattern.pdf',
-  },
   'outfit-colouring': {
     name: 'Outfit colouring book',
-    price: 800,
+    price: 600,
     pdf: 'outfitcolouring.pdf',
   },
-  'skirt-pattern': {
-    name: 'A-Line Skirt PDF Pattern',
-    price: 900,
-    pdf: 'aline_skirt_pattern.pdf',
+  'teacup-colouring': {
+    name: 'Teacup Colouring pages',
+    price: 500,
+    pdf: 'teacup.pdf',
   },
-  'habit-tracker': {
+  '365habit-tracker': {
     name: 'Daily Habit Tracker',
-    price: 400,
-    pdf: 'daily_habit_tracker.pdf',
+    price: 200,
+    pdf: '365day.pdf',
   },
-  'meal-planner': {
-    name: 'Weekly Meal Planner',
+  'endorphin-planner': {
+    name: 'Endorphin Planner pages',
     price: 500,
-    pdf: 'weekly_meal_planner.pdf',
+    pdf: 'endorphinpl.pdf',
   },
-  'stitch-sampler': {
-    name: 'Floral Stitch Sampler',
-    price: 1200,
-    pdf: 'floral_stitch_sampler.pdf',
+  'half-mara': {
+    name: 'Half marathon 15 week training plan',
+    price: 300,
+    pdf: 'halfmara.pdf',
   },
-  'fern-print': {
-    name: 'Botanical Print — Fern',
-    price: 600,
-    pdf: 'botanical_fern_print.pdf',
-  },
-  'budget-bundle': {
-    name: 'Budget Worksheet Bundle',
-    price: 700,
-    pdf: 'budget_worksheet_bundle.pdf',
-  },
-  'goals-planner': {
-    name: 'Monthly Goals Planner',
-    price: 500,
-    pdf: 'monthly_goals_planner.pdf',
+  '75-day': {
+    name: '75 day Challenge ',
+    price: 200,
+    pdf: '75day.pdf',
   },
 };
 
